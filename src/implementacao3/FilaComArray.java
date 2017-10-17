@@ -43,7 +43,7 @@ class FilaComArray implements Fila_IF {
     public int dequeue() throws Exception {
         int element;
         if (isEmpty()) {
-            throw new Exception("A fila está vazia, não pode tirar nada.");
+            throw new Exception("A fila está vazia.");
         } else if (this.head == this.tail) {
             element = this.fila[head];
             this.head = -1;

@@ -11,32 +11,73 @@ package implementacao3;
  */
 class PilhaComFilas implements Pilha_IF {
 
+    FilaComArray fila1, fila2;
+
     public PilhaComFilas() {
+        this.fila1 = new FilaComArray();
+        this.fila2 = new FilaComArray();
     }
 
     @Override
     public void push(int element) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (!fila1.isFull()) {
+            fila2.enqueue(element);
+            while (!fila1.isEmpty()) {
+                fila2.enqueue(fila1.dequeue());
+            }
+
+            while (!fila2.isEmpty()) {
+                fila1.enqueue(fila2.dequeue());
+            }
+
+        } else {
+            throw new Exception("A Pilha está cheia.");
+        }
     }
 
     @Override
     public int pop() throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (!fila1.isEmpty()) {
+            return fila1.dequeue();
+        } else {
+            throw new Exception("A Pilha está vazia.");
+        }
     }
 
     @Override
     public int top() throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int element;
+        if (!fila1.isEmpty()) {
+            while (!fila1.isEmpty()) {
+                fila2.enqueue(fila1.dequeue());
+            }
+
+            element = fila2.head();
+
+            while (!fila2.isEmpty()) {
+                fila1.enqueue(fila2.dequeue());
+            }
+            return element;
+        } else {
+            throw new Exception("A Pilha está vazia.");
+        }
+        
     }
 
     @Override
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (fila1.isEmpty()) {
+            return true;
+        }
+        return false;
     }
 
     @Override
     public boolean isFull() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (fila1.isFull()) {
+            return true;
+        }
+        return false;
     }
 
 }
