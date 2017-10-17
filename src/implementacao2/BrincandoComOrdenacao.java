@@ -74,16 +74,32 @@ public class BrincandoComOrdenacao {
 
         int[][] vetores = {array1, array2, array3};
         int cont = 0;
+        int tempoMedio = 0;
+        String arrayName = null;
 
         System.out.println("Bubble Sort");
         for (int[] vetor : vetores) {
             cont++;
-            long tempo1 = System.nanoTime();
-            bubbleSort(vetor);
-            long tempo2 = System.nanoTime();
-            System.out.println("Array" + cont + "[" + vetor.length + " elementos] Tempo total: " + (tempo2 - tempo1));
+
+            for (int a = 1; a <= 10; a++) {
+                long tempo1 = System.nanoTime();
+                bubbleSort(vetor);
+                long tempo2 = System.nanoTime();
+                tempoMedio += tempo2 - tempo1;
+            }
+            tempoMedio /= 10;
+            if (cont == 1) {
+                arrayName = "ordenados crescente";
+            } else if (cont == 2) {
+                arrayName = "ordenados decrescente";
+            } else if (cont == 3) {
+                arrayName = "elementos aleatórios";
+            }
+            System.out.println("Array" + cont + "[" + vetor.length + " elementos " + arrayName + "] Tempo total [Media]: " + (tempoMedio));
         }
+
         cont = 0;
+        tempoMedio = 0;
         System.out.println("");
 
         preencherArrays(array1, array2, array3, arrayRandom, arrayRandom2);
@@ -91,12 +107,26 @@ public class BrincandoComOrdenacao {
         System.out.println("\nSelection Sort");
         for (int[] vetor : vetores) {
             cont++;
-            long tempo1 = System.nanoTime();
-            selectionSort(vetor);
-            long tempo2 = System.nanoTime();
-            System.out.println("Array" + cont + "[" + vetor.length + " elementos] Tempo total: " + (tempo2 - tempo1));
+
+            for (int a = 1; a <= 10; a++) {
+                long tempo1 = System.nanoTime();
+                selectionSort(vetor);
+                long tempo2 = System.nanoTime();
+                tempoMedio += tempo2 - tempo1;
+            }
+            tempoMedio /= 10;
+            if (cont == 1) {
+                arrayName = "ordenados crescente";
+            } else if (cont == 2) {
+                arrayName = "ordenados decrescente";
+            } else if (cont == 3) {
+                arrayName = "elementos aleatórios";
+            }
+            System.out.println("Array" + cont + "[" + vetor.length + " elementos " + arrayName + "] Tempo total [Media]: " + (tempoMedio));
         }
+
         cont = 0;
+        tempoMedio = 0;
         System.out.println("");
 
         preencherArrays(array1, array2, array3, arrayRandom, arrayRandom2);
@@ -104,12 +134,26 @@ public class BrincandoComOrdenacao {
         System.out.println("\nInsertion Sort");
         for (int[] vetor : vetores) {
             cont++;
-            long tempo1 = System.nanoTime();
-            selectionSort(vetor);
-            long tempo2 = System.nanoTime();
-            System.out.println("Array" + cont + "[" + vetor.length + " elementos] Tempo total: " + (tempo2 - tempo1));
+
+            for (int a = 1; a <= 10; a++) {
+                long tempo1 = System.nanoTime();
+                insertionSort(vetor);
+                long tempo2 = System.nanoTime();
+                tempoMedio += tempo2 - tempo1;
+            }
+            tempoMedio /= 10;
+            if (cont == 1) {
+                arrayName = "ordenados crescente";
+            } else if (cont == 2) {
+                arrayName = "ordenados decrescente";
+            } else if (cont == 3) {
+                arrayName = "elementos aleatórios";
+            }
+            System.out.println("Array" + cont + "[" + vetor.length + " elementos " + arrayName + "] Tempo total [Media]: " + (tempoMedio));
         }
+
         cont = 0;
+        tempoMedio = 0;
         System.out.println("");
 
         preencherArrays(array1, array2, array3, arrayRandom, arrayRandom2);
@@ -117,12 +161,26 @@ public class BrincandoComOrdenacao {
         System.out.println("\nMerge Sort");
         for (int[] vetor : vetores) {
             cont++;
-            long tempo1 = System.nanoTime();
-            mergeSort(vetor);
-            long tempo2 = System.nanoTime();
-            System.out.println("Array" + cont + "[" + vetor.length + " elementos] Tempo total: " + (tempo2 - tempo1));
+
+            for (int a = 1; a <= 10; a++) {
+                long tempo1 = System.nanoTime();
+                mergeSort(vetor);
+                long tempo2 = System.nanoTime();
+                tempoMedio += tempo2 - tempo1;
+            }
+            tempoMedio /= 10;
+            if (cont == 1) {
+                arrayName = "ordenados crescente";
+            } else if (cont == 2) {
+                arrayName = "ordenados decrescente";
+            } else if (cont == 3) {
+                arrayName = "elementos aleatórios";
+            }
+            System.out.println("Array" + cont + "[" + vetor.length + " elementos " + arrayName + "] Tempo total [Media]: " + (tempoMedio));
         }
+
         cont = 0;
+        tempoMedio = 0;
         System.out.println("");
 
         preencherArrays(array1, array2, array3, arrayRandom, arrayRandom2);
@@ -130,23 +188,51 @@ public class BrincandoComOrdenacao {
         System.out.println("\nQuick Sort");
         for (int[] vetor : vetores) {
             cont++;
-            long tempo1 = System.nanoTime();
-            quickSort(vetor);
-            long tempo2 = System.nanoTime();
-            System.out.println("Array" + cont + "[" + vetor.length + " elementos] Tempo total: " + (tempo2 - tempo1));
+
+            for (int a = 1; a <= 10; a++) {
+                long tempo1 = System.nanoTime();
+                quickSort(vetor);
+                long tempo2 = System.nanoTime();
+                tempoMedio += tempo2 - tempo1;
+            }
+            tempoMedio /= 10;
+            if (cont == 1) {
+                arrayName = "ordenados crescente";
+            } else if (cont == 2) {
+                arrayName = "ordenados decrescente";
+            } else if (cont == 3) {
+                arrayName = "elementos aleatórios";
+            }
+            System.out.println("Array" + cont + "[" + vetor.length + " elementos " + arrayName + "] Tempo total [Media]: " + (tempoMedio));
         }
+
         cont = 0;
+        tempoMedio = 0;
         System.out.println("");
 
         System.out.println("\nCounting Sort");
         for (int[] vetor : vetores) {
             cont++;
-            long tempo1 = System.nanoTime();
-            countingSort(vetor);
-            long tempo2 = System.nanoTime();
-            System.out.println("Array" + cont + "[" + vetor.length + " elementos] Tempo total: " + (tempo2 - tempo1));
+
+            for (int a = 1; a <= 10; a++) {
+                long tempo1 = System.nanoTime();
+                countingSort(vetor);
+                long tempo2 = System.nanoTime();
+                tempoMedio += tempo2 - tempo1;
+            }
+            tempoMedio /= 10;
+            if (cont == 1) {
+                arrayName = "ordenados crescente";
+            } else if (cont == 2) {
+                arrayName = "ordenados decrescente";
+            } else if (cont == 3) {
+                arrayName = "elementos aleatórios";
+            }
+            System.out.println("Array" + cont + "[" + vetor.length + " elementos " + arrayName + "] Tempo total [Media]: " + (tempoMedio));
         }
+
         cont = 0;
+        tempoMedio = 0;
         System.out.println("");
 
         preencherArrays(array1, array2, array3, arrayRandom, arrayRandom2);
@@ -154,12 +240,26 @@ public class BrincandoComOrdenacao {
         System.out.println("\nRadix Sort");
         for (int[] vetor : vetores) {
             cont++;
-            long tempo1 = System.nanoTime();
-            radixSort(vetor);
-            long tempo2 = System.nanoTime();
-            System.out.println("Array" + cont + "[" + vetor.length + " elementos] Tempo total: " + (tempo2 - tempo1));
+
+            for (int a = 1; a <= 10; a++) {
+                long tempo1 = System.nanoTime();
+                radixSort(vetor);
+                long tempo2 = System.nanoTime();
+                tempoMedio += tempo2 - tempo1;
+            }
+            tempoMedio /= 10;
+            if (cont == 1) {
+                arrayName = "ordenados crescente";
+            } else if (cont == 2) {
+                arrayName = "ordenados decrescente";
+            } else if (cont == 3) {
+                arrayName = "elementos aleatórios";
+            }
+            System.out.println("Array" + cont + "[" + vetor.length + " elementos " + arrayName + "] Tempo total [Media]: " + (tempoMedio));
         }
+
         cont = 0;
+        tempoMedio = 0;
         System.out.println("");
 
         preencherArrays(array1, array2, array3, arrayRandom, arrayRandom2);
@@ -167,12 +267,27 @@ public class BrincandoComOrdenacao {
         System.out.println("\nBucket Sort");
         for (int[] vetor : vetores) {
             cont++;
-            long tempo1 = System.nanoTime();
-            bucketSort(vetor);
-            long tempo2 = System.nanoTime();
-            System.out.println("Array" + cont + "[" + vetor.length + " elementos] Tempo total: " + (tempo2 - tempo1));
+
+            for (int a = 1; a <= 10; a++) {
+                long tempo1 = System.nanoTime();
+                bucketSort(vetor);
+                long tempo2 = System.nanoTime();
+                tempoMedio += tempo2 - tempo1;
+            }
+            tempoMedio /= 10;
+            if (cont == 1) {
+                arrayName = "ordenados crescente";
+            } else if (cont == 2) {
+                arrayName = "ordenados decrescente";
+            } else if (cont == 3) {
+                arrayName = "elementos aleatórios";
+            }
+            System.out.println("Array" + cont + "[" + vetor.length + " elementos " + arrayName + "] Tempo total [Media]: " + (tempoMedio));
         }
+
         cont = 0;
+        tempoMedio = 0;
+        System.out.println("");
 
         preencherArrays(array1, array2, array3, arrayRandom, arrayRandom2);
     }
@@ -229,21 +344,21 @@ public class BrincandoComOrdenacao {
 
     private static void ordenaMerge(int[] vetor, int[] temp, int min, int max) {
         if (min < max) {
-            int middle = min + (max - min) / 2;
-            ordenaMerge(vetor, temp, min, middle);
-            ordenaMerge(vetor, temp, middle + 1, max);
-            mergeParts(vetor, temp, min, middle, max);
+            int meio = min + (max - min) / 2;
+            ordenaMerge(vetor, temp, min, meio);
+            ordenaMerge(vetor, temp, meio + 1, max);
+            mergeParts(vetor, temp, min, meio, max);
         }
     }
 
-    private static void mergeParts(int[] vetor, int[] temp, int min, int middle, int max) {
+    private static void mergeParts(int[] vetor, int[] temp, int min, int meio, int max) {
         for (int i = min; i <= max; i++) {
             temp[i] = vetor[i];
         }
         int i = min;
-        int j = middle + 1;
+        int j = meio + 1;
         int k = min;
-        while (i <= middle && j <= max) {
+        while (i <= meio && j <= max) {
             if (temp[i] <= temp[j]) {
                 vetor[k] = temp[i];
                 i++;
@@ -253,7 +368,7 @@ public class BrincandoComOrdenacao {
             }
             k++;
         }
-        while (i <= middle) {
+        while (i <= meio) {
             vetor[k] = temp[i];
             k++;
             i++;
@@ -274,12 +389,12 @@ public class BrincandoComOrdenacao {
 
         int i = min;
         int j = max;
-        int pivot = vetor[min + (max - min) / 2];
+        int pivo = vetor[min + (max - min) / 2];
         while (i <= j) {
-            while (vetor[i] < pivot) {
+            while (vetor[i] < pivo) {
                 i++;
             }
-            while (vetor[j] > pivot) {
+            while (vetor[j] > pivo) {
                 j--;
             }
             if (i <= j) {
@@ -307,32 +422,23 @@ public class BrincandoComOrdenacao {
         int max = getMax(vetor);
         int numCounts[] = new int[max + 1];
 
-        // populate numCounts
         for (int num : vetor) {
             numCounts[num]++;
         }
-
-        // populate the final sorted array
-        int[] sortedArray = new int[vetor.length];
-        int currentSortedIndex = 0;
-
-        // for each num in numCounts
+        int[] arrayOrdenada = new int[vetor.length];
+        int index = 0;
         for (int num = 0; num < numCounts.length; num++) {
             int count = numCounts[num];
-
-            // for the number of times the item occurs
             for (int i = 0; i < count; i++) {
-
-                // add it to the sorted array
-                sortedArray[currentSortedIndex] = num;
-                currentSortedIndex++;
+                arrayOrdenada[index] = num;
+                index++;
             }
         }
     }
 
     public static void radixSort(int[] vetor) {
         int m = getMax(vetor);
-        for (int i = 1; m / i > 0; i++) {
+        for (int i = 1; m / i > 0; i *= 10) {
             countingSort(vetor);
         }
     }
