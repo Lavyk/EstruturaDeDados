@@ -4,6 +4,8 @@ public class BrincandoComPilhaEFila {
 
     public static void main(String[] args) throws Exception {
 
+        System.out.println("Aluno: Lavyk");
+        
         System.out.println("Brincando com PilhaComArray...");
         Pilha_IF minhaPilha1 = new PilhaComArray();
         minhaPilha1.push(100);
