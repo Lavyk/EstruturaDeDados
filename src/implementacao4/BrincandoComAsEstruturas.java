@@ -33,6 +33,8 @@ public class BrincandoComAsEstruturas {
 		System.out.println();
 				
 		
+                /* ---------------------------------
+                
 		System.out.println("Brincando com BST...");
 		BST_IF arvore = new BST();
 		arvore.insert(8);
@@ -90,7 +92,7 @@ public class BrincandoComAsEstruturas {
 		}
 		System.out.println(tabela.print().equals("0: 24, 16\n1: \n2: 10\n3: 19, 11, 3\n4: 12, 4\n5: \n6: 22, 14, 6\n7: 15"));
 		
-		
+		*/
 		//OBS.: Espera-se que nenhum print mostre 'false' na tela!
 		
 	}

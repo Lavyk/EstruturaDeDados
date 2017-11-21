@@ -11,20 +11,31 @@ package implementacao4;
  */
 public class ListaEncadeada implements ListaEncadeada_IF {
 
-    private 
-    private 
-    
+    private ListaEncadeadaNode head;
+
     public ListaEncadeada() {
+        head = new ListaEncadeadaNode();
     }
 
     @Override
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (head.isNIL()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
     public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int cont = 0;
+        ListaEncadeadaNode aux = head;
+        
+        while (aux.getProximoNode() != null) {
+            aux = aux.getProximoNode();
+            cont += 1;
+        }
+        return cont;
     }
 
     @Override
@@ -34,7 +45,7 @@ public class ListaEncadeada implements ListaEncadeada_IF {
 
     @Override
     public void insert(int element) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        head = new ListaEncadeadaNode(element, head);
     }
 
     @Override
@@ -46,5 +57,5 @@ public class ListaEncadeada implements ListaEncadeada_IF {
     public int[] toArray() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

@@ -23,4 +23,32 @@ public class ListaEncadeadaNode {
         this.proximoNode = proximoNode;
     }
 
+    public ListaEncadeadaNode getProximoNode() {
+        try {
+            return proximoNode;
+        } catch (Exception e) {
+            return null;
+        }
+
+    }
+
+    public void setProximoNode(ListaEncadeadaNode proximoNode) {
+        this.proximoNode = proximoNode;
+    }
+
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
+
+    public boolean isNIL() {
+        if (this.data == null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
