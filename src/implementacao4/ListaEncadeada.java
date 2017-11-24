@@ -40,17 +40,38 @@ public class ListaEncadeada implements ListaEncadeada_IF {
 
     @Override
     public int search(int element) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ListaEncadeadaNode aux = this.head;
+        try {
+            while (!aux.isNIL() && (int) aux.getData() != element) {
+                aux = aux.getProximoNode();
+            }
+            return (int) aux.getData();
+        } catch (Exception e) {
+            System.err.println(e);
+            return -1;
+        }
     }
 
     @Override
     public void insert(int element) {
-        head = new ListaEncadeadaNode(element, this.head);
+        this.head = new ListaEncadeadaNode(element, this.head);
     }
 
     @Override
     public void remove(int element) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if((int) this.head.getData() == element){
+            this.head = this.head.getProximoNode();
+        } else {
+            ListaEncadeadaNode aux = this.head;
+            ListaEncadeadaNode previous = new ListaEncadeadaNode();
+            while(!aux.isNIL() && (int) aux.getData() != element){
+                previous = aux;
+                aux = aux.getProximoNode();
+            }
+            if(!aux.isNIL()){
+                previous.setProximoNode(aux.getProximoNode());
+            }
+        }
     }
 
     @Override
