@@ -31,7 +31,7 @@ public class BrincandoComAsEstruturas {
         System.out.println(lista.toArray()[0] == 200);
         System.out.println(lista.search(200) == 200);
         System.out.println();
-        
+
         ------*/
 
         System.out.println("Brincando com BST...");
@@ -74,7 +74,7 @@ public class BrincandoComAsEstruturas {
         }
         System.out.println(Arrays.toString(arvore.preOrder()).equals(Arrays.toString(new int[]{8, 4, 2, 1, 3, 6, 5, 7, 12, 10, 9, 11, 14, 13, 15})));
         System.out.println(Arrays.toString(arvore.order()).equals(Arrays.toString(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15})));
-        System.out.println(Arrays.toString(arvore.postOrder()).equals(Arrays.toString(new int[]{1, 3, 2, 5, 7, 6, 4, 9, 11, 10, 13, 15, 14, 12, 8})));
+        /*System.out.println(Arrays.toString(arvore.postOrder()).equals(Arrays.toString(new int[]{1, 3, 2, 5, 7, 6, 4, 9, 11, 10, 13, 15, 14, 12, 8})));
 
         /* -----------------------------------------------
 		System.out.println("Brincando com TabelaHash...");
@@ -90,7 +90,7 @@ public class BrincandoComAsEstruturas {
 			tabela.remove(elementosARemover[i]);
 		}
 		System.out.println(tabela.print().equals("0: 24, 16\n1: \n2: 10\n3: 19, 11, 3\n4: 12, 4\n5: \n6: 22, 14, 6\n7: 15"));
-		
+
          */
         //OBS.: Espera-se que nenhum print mostre 'false' na tela!
     }
